@@ -12,7 +12,7 @@ public class FileService {
 		try {
 			fileReader = new BufferedReader(new FileReader(fileName));
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 
@@ -22,7 +22,7 @@ public class FileService {
 		
 		try {
 			while ((line = fileReader.readLine()) != null) {
-				// split each line into different pieces
+				// split each line into different pieces                                                                                                                                                                                                                 
 				String[] linePieces = line.split(",");
 				
 				String username = linePieces[0];
@@ -33,13 +33,13 @@ public class FileService {
 				
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 		try {
 			fileReader.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 		return users;

@@ -7,7 +7,7 @@ public class UserService {
 	User[] users = new User[10];
 	int userLoginLeft = 5;
 
-	public void pleaseLogin() {
+	public void login() {
 
 		Scanner scanner = new Scanner(System.in);
 		
@@ -18,9 +18,9 @@ public class UserService {
 			String userLogin = scanner.nextLine();
 			System.out.println("Enter password:");
 			String userPassword = scanner.nextLine();
-			User personLogged = userValidation(userLogin, userPassword);
-			if (personLogged != null) {
-				System.out.println("Welcome " + personLogged.getName() +"!");
+			User userLoggedIn = userValidation(userLogin, userPassword);
+			if (userLoggedIn != null) {
+				System.out.println("Welcome " + userLoggedIn.getName() +"!");
 				break;
 			} else {
 				System.out.println("Invalid login, please try again");
